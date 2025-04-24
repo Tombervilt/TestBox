@@ -33,7 +33,7 @@ public class TestBox {
             $("#subjectsInput").setValue("English").pressEnter();
             $("label[for=hobbies-checkbox-1]").click();
             $("label[for=hobbies-checkbox-3]").click();
-            $("#uploadPicture").uploadFile(new File("src/test/resourses/image/test.png"));
+            $("#uploadPicture").uploadFromClasspath("image/test.png");
             $("#currentAddress").setValue("г. Н, ул. Пушкина, д. Колотушкина, кв. 101");
             $("#react-select-3-input").setValue("Uttar Pradesh").pressEnter();
             $("#react-select-4-input").setValue("Agra").pressEnter();$("#submit").click();
