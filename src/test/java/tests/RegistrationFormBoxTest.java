@@ -1,11 +1,12 @@
+package tests;
+
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
-public class testRegistrationFormBox {
+public class RegistrationFormBoxTest {
 
     @BeforeAll
     static void beforeAll() {
@@ -13,7 +14,7 @@ public class testRegistrationFormBox {
         Configuration.browserSize = "1920x1080";
         Configuration.pageLoadStrategy = "eager";
     }
-    @Test
+
     void successfullTest() {
         open("/automation-practice-form");
         $("#firstName").setValue("Thomas");
@@ -35,7 +36,7 @@ public class testRegistrationFormBox {
         $("#submit").click();
 
         $("div[role=document]").shouldHave(text("Thomas Anderson")).shouldHave(text("neo@matrix.web")).shouldHave(text("Male"))
-        .shouldHave(text("8800555353")).shouldHave(text("13 September,1971")).shouldHave(text("English")).shouldHave(text("Sports, Music"))
-        .shouldHave(text("test.png")).shouldHave(text("г. Н, ул. Пушкина, д. Колотушкина, кв. 101")).shouldHave(text("Uttar Pradesh Agra"));
-        }
+                .shouldHave(text("8800555353")).shouldHave(text("13 September,1971")).shouldHave(text("English")).shouldHave(text("Sports, Music"))
+                .shouldHave(text("test.png")).shouldHave(text("г. Н, ул. Пушкина, д. Колотушкина, кв. 101")).shouldHave(text("Uttar Pradesh Agra"));
+    }
 }
