@@ -4,10 +4,6 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-
 public class RegistrationFormBoxPageObjectsTest extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
@@ -33,6 +29,8 @@ public class RegistrationFormBoxPageObjectsTest extends TestBase {
                 .setCity("Agra")
                 .getSubmit()
 
+
+
                 //Проверка введенных данных
                 .submitFormComponent("Student Name", "Thomas Anderson")
                 .submitFormComponent("Student Email", "neo@matrix.web")
@@ -44,6 +42,7 @@ public class RegistrationFormBoxPageObjectsTest extends TestBase {
                 .submitFormComponent("Picture", "test.png")
                 .submitFormComponent("Address", "г. Н, ул. Пушкина, д. Колотушкина, кв. 101")
                 .submitFormComponent("State and City", "Uttar Pradesh Agra");
+
 
 
 
