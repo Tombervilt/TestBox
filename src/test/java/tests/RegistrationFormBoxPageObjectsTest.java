@@ -3,6 +3,8 @@ package tests;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
+import static com.codeborne.selenide.Selenide.sleep;
+
 
 public class RegistrationFormBoxPageObjectsTest extends TestBase {
 
@@ -43,8 +45,7 @@ public class RegistrationFormBoxPageObjectsTest extends TestBase {
                 .submitFormComponent("Address", "г. Н, ул. Пушкина, д. Колотушкина, кв. 101")
                 .submitFormComponent("State and City", "Uttar Pradesh Agra");
 
-
-
+        sleep(10000);
 
     }
     @Test
